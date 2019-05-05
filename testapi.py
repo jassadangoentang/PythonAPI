@@ -200,20 +200,54 @@ class Tracks(Resource):
             # str = json.dumps(dict)
             return(items)
 
-# class Employees_Name(Resource):
-#    def get(self, employee_id):
-#        # conn = db_connect.connect()
-#        # query = conn.execute("select * from employees where EmployeeId =%d "  %int(employee_id))
-#        # result = {'data': [dict(zip(tuple (query.keys()) ,i)) for i in query.cursor]}
-#        # return jsonify(result)
-#         return (employee_id)
- 
+class SearchBy(Resource):
+   def get(self, SearchBy_keyword):
+        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+        auth.set_access_token(access_key, access_secret)
+        api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+        
+        searchquery = SearchBy_keyword
+        # tweets = tweepy.Cursor(api.search, q=searchquery, count=10, include_entities=True)
+        tweets =  tweepy.Cursor(api.search, q=searchquery, include_entities=True).items(100)
+        items =[];
+
+        for status in tweets:
+            try:
+                for media in status.extended_entities['media']:
+                    print(media['media_url'])
+                    datetime = status.created_at.strftime("%Y-%m-%d %H:%M:%S")
+                    # caption = media.text
+                    # checkRT = ''+caption[0]+caption[1];
+                    # print(checkRT)
+                    # if(checkRT in 'RT'):
+                    detail = {
+                            "line_id": "test",
+                            "price": 200,
+                            "shop_name": "shop2",
+                            "shop_link": "https://twitter.com/tw_shopp",
+                            "description": "",
+                            "photo": media['media_url'],
+                            "save": "false",
+                            "created_at": datetime,
+                            "favorite_count": 2,
+                            "priority_score": 9,
+                            "retweet_count": 1
+                        }
+                        # print tweet.created_at
+                        # print tweet.text.encode("utf-8")
+                        # print tweet.favorite_count
+                        # print tweet.retweet_count
+                        # print tweet.id_str
+                        # print tweet.entities['media'][0]['media_url']
+                        # print "------------------"
+                items.append(detail)
+
+                    # urllib.request.urlretrieve(media['media_url'], os.path.join(os.getcwd(), os.path.join('files', 'riko_meme'), media['media_url'].link.split('/')[-1]))
+            except AttributeError:
+                pass 
 
 
-
-
-       
-#        return "o Employeee_name"
+        return (items)
 
 
 
@@ -222,7 +256,7 @@ class Tracks(Resource):
 api.add_resource(SearchProducts, '/product/<SearchProducts_id>')
 # api.add_resource(Tweets, '/tweets')
 api.add_resource(Tracks, '/tracks')  # Route_2
-# api.add_resource(Employees_Name, '/employees/<employee_id>')  # Route_3
+api.add_resource(SearchBy, '/searchby/<SearchBy_keyword>')  # Route_3
 
 
 if __name__ == '__main__':
