@@ -206,47 +206,87 @@ class SearchBy(Resource):
         auth.set_access_token(access_key, access_secret)
         api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
         
-        searchquery = SearchBy_keyword
+        searchquery = SearchBy_keyword+" ราคา"
+
         # tweets = tweepy.Cursor(api.search, q=searchquery, count=10, include_entities=True)
-        tweets =  tweepy.Cursor(api.search, q=searchquery, include_entities=True).items(100)
-        items =[];
+        tweets =  tweepy.Cursor(api.search, q=searchquery+ ' -RT', lang="th", include_entities=True).items(100)
+        items=[]
 
         for status in tweets:
             try:
-                for media in status.extended_entities['media']:
-                    print(media['media_url'])
-                    datetime = status.created_at.strftime("%Y-%m-%d %H:%M:%S")
-                    # caption = media.text
-                    # checkRT = ''+caption[0]+caption[1];
-                    # print(checkRT)
-                    # if(checkRT in 'RT'):
-                    detail = {
+                # print(status.user.screen_name)
+                # print(status.extended_entities['media'][0]['media_url'])
+                datetime = status.created_at.strftime("%Y-%m-%d %H:%M:%S")
+                detail = {
                             "line_id": "test",
                             "price": 200,
-                            "shop_name": "shop2",
+                            "shop_name": status.user.screen_name,
                             "shop_link": "https://twitter.com/tw_shopp",
-                            "description": "",
-                            "photo": media['media_url'],
+                            "description": status.text,
+                            "photo": status.extended_entities['media'][0]['media_url'],
                             "save": "false",
                             "created_at": datetime,
-                            "favorite_count": 2,
+                            "favorite_count": status.favorite_count,
                             "priority_score": 9,
-                            "retweet_count": 1
+                            "retweet_count": status.retweet_count
                         }
-                        # print tweet.created_at
-                        # print tweet.text.encode("utf-8")
-                        # print tweet.favorite_count
-                        # print tweet.retweet_count
-                        # print tweet.id_str
-                        # print tweet.entities['media'][0]['media_url']
-                        # print "------------------"
                 items.append(detail)
-
-                    # urllib.request.urlretrieve(media['media_url'], os.path.join(os.getcwd(), os.path.join('files', 'riko_meme'), media['media_url'].link.split('/')[-1]))
             except AttributeError:
                 pass 
-
-
+            
+            # if(status.entities['media']):
+            # detail = {
+            #                 "line_id": "test",
+            #                 "price": 200,
+            #                 "shop_name": "shop2",
+            #                 "shop_link": "https://twitter.com/tw_shopp",
+            #                 "description": status.text,
+            #                 "photo": "",
+            #                 "save": "false",
+            #                 "created_at": "",
+            #                 "favorite_count": 2,
+            #                 "priority_score": 9,
+            #                 "retweet_count": 1
+            #             }
+            # items.append(detail)
+            # try:
+                # for media in status.extended_entities['media']:
+            #         meta.append(media._json)
+                    # meta.append(media['media_url']._json)
+                    # print(media['media_url'])
+            #         # datetime = status.created_at.strftime("%Y-%m-%d %H:%M:%S")
+            #         # caption = media.text
+            #         # checkRT = ''+caption[0]+caption[1];
+            #         # print(checkRT)
+            #         # if(checkRT in 'RT'):
+                    # detail = {
+                    #         "line_id": "test",
+                    #         "price": 200,
+                    #         "shop_name": "shop2",
+                    #         "shop_link": "https://twitter.com/tw_shopp",
+                    #         "description": "",
+                    #         "photo": media['media_url'],
+                    #         "save": "false",
+                    #         "created_at": "",
+                    #         "favorite_count": 2,
+                    #         "priority_score": 9,
+                    #         "retweet_count": 1
+                    #     }
+            #             # print tweet.created_at
+            #             # print tweet.text.encode("utf-8")
+            #             # print tweet.favorite_count
+            #             # print tweet.retweet_count
+            #             # print tweet.id_str
+            #             # print tweet.entities['media'][0]['media_url']
+            #             # print "------------------"
+                # meta.append(media)
+        
+            #         # urllib.request.urlretrieve(media['media_url'], os.path.join(os.getcwd(), os.path.join('files', 'riko_meme'), media['media_url'].link.split('/')[-1]))
+            # except AttributeError:
+                # pass 
+                    
+        
+        # print(type(tweets))
         return (items)
 
 
@@ -264,3 +304,6 @@ if __name__ == '__main__':
     app.run(port='5002')
     # test(CORSRequestHandler, HTTPServer, port=int(sys.argv[1]) if len(sys.argv) > 1 else 8000)
     # app.run(port='5002')
+
+
+    
