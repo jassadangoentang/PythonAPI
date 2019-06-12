@@ -24,17 +24,17 @@
 ## npx
 ### `npx create-react-app TweetsPrice`
 (npx comes with npm 5.2+ and higher, see instructions for older npm versions)
-
 ## npm
 ### `npm init react-app TweetsPrice`
 npm init <initializer> is available in npm 6+
-
 ## yarn
 ### `yarn create react-app TweetsPrice`
 yarn create is available in Yarn 0.25+
-
 2) หลังจากสร้างโปรเจ็คเสร็จแล้วเข้าไปในโปรเจ็คด้วยคำสั่ง cd ตามด้วยชื่อโฟลเดอร์โปรเจ็ค
 ### `cd TweetsPrice`
-
-3) รันโปรเจ็คด้วยคำสั้ง npm start
+3)ทำการติดตั้ง Library ต่าง ๆ ที่ใช้ในการพัฒนาโปรเจ็ค ด้วยคำสั่ง npm install
+### `npm install`
+กรณีที่บาง Library ไม่ถูกติดตั้งด้วยคำสั่ง npm install ให้ทำการติดตั้ง Library เหล่านั้นด้วยคำสั่งดฉพาะของแต่ละ Library เช่น ฐานข้อมูล Firebase ใช้คำสั่ง  npm install --save firebase เป็นต้น 
+4) หลังจากติดตั้ง Library ครบแล้วรันโปรเจ็คด้วยคำสั้ง npm start จะได้เป็นหน้าหลักของเว็บไซต์
 ### `npm start`
+หลังจากรันได้หน้าหลักของเว็บไซต์แล้ว ถ้าต้องการแก้ไขโค้ดให้ทำการเป็ดโฟลเดอร์โปรเจ็คด้วยโปรแกรมแก้ไขโค้ดแล้วทำการแก้ไขได้เลย 
