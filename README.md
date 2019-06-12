@@ -41,3 +41,10 @@ yarn create is available in Yarn 0.25+
 
 # `ขั้นตอนการติดตั้ง Flask Framework`
 flask framework เป็น framework ในการพัฒนา python api เพื่อให้ดึงข้อมูลสินค้าจาก Twitter แล้วนำมาประมวลผลเบื่องต้นจากนั้น return ไปที่ port ต่าง ๆ ที่กำหนด เพื่อให้ฝั่ง ReactJS ทำการร้องขอข้อมูลไปประมวลผลต่อแล้วแสดงผลผ่านทางหน้าเว็ปไซต์
+
+1) สร้างสภาพแวดล้อมสำหรับ Flask Framework โดยในโปรเจ็คนี้ใช้ Anaconda ทำการดาวน์โหลดและติดตั้ง<br>
+ที่เว็ปไซต์ [เข้าไปที่เว็บไซต์ https://www.anaconda.com/download/](https://www.anaconda.com/download/)<br>
+![](https://cdn-images-1.medium.com/max/800/1*doEWg12t2rYwiLTa6kt0Rw.png)<br>
+2) ตรวจสอบการติดตั้งให้แน่ใจด้วยคำสั่ง
+### `conda --version`
+![](https://cdn-images-1.medium.com/max/800/1*7ChGM2Z_-l_nxyOmqd_bQQ.png)<br>
