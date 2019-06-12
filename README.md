@@ -12,5 +12,8 @@
 ทำการติดตั้ง NodeJS เพื่อใช้เป็นเซิร์ฟเวอร์ในการประมวลผลข้อมูล
 1) เข้าเว็บไซด์ [nodejs.org](https://nodejs.org/en/) แล้วทำการดาวน์โหลด
 ![](https://i2.wp.com/farm8.staticflickr.com/7375/27917766142_0f7f6a5b02_z.jpg?resize=640%2C346&ssl=1)<br>
-ที่มา : https://playground.cmmakerclub.com/2016/07/javascript/การติดตั้ง-node-js-และ-npm-บน-windows/
-2) เมื่อดาวน์โหลดเสร็จแล้ว จะได้ตัว Install node js มา ให้ทำการ Double click เพื่อติดตั้ง
+2) เมื่อดาวน์โหลดเสร็จแล้ว จะได้ตัว Install node js มา ให้ทำการ Double click เพื่อติดตั้ง<br>
+3) กด Finish เพื่อเป็นการสิ้นสุดการติดตั้ง<br>
+4) เพื่อเป็นการยืนยันการติดตั้งสำเร็จเข้าไปที่ Start –> cmd พิมพ์ node -v และ npm -v จะแสดงเวอร์ชั่นของ node js และ npm ที่ติดตั้ง<br>
+![](https://i0.wp.com/farm8.staticflickr.com/7377/27406167804_91c8ab07c6_z.jpg?resize=640%2C339&ssl=1)<br>
+ที่มา : https://playground.cmmakerclub.com/2016/07/javascript/การติดตั้ง-node-js-และ-npm-บน-windows/<br>
