@@ -7,7 +7,7 @@
 ## `ขั้นตอนการติดตั้ง React Framework`
 
     ขั้นตอนการติดตั้ง React Framework มีทั้งหมด 10 ขั้นตอนได้แก่
-### `ขั้นที่ 1 ติดตั้ง NodeJS`
+## `ขั้นที่ 1 ติดตั้ง NodeJS`
 
 ทำการติดตั้ง NodeJS เพื่อใช้เป็นเซิร์ฟเวอร์ในการประมวลผลข้อมูล
 1) เข้าเว็บไซด์ [nodejs.org](https://nodejs.org/en/) แล้วทำการดาวน์โหลด
@@ -18,7 +18,7 @@
 ![](https://i0.wp.com/farm8.staticflickr.com/7377/27406167804_91c8ab07c6_z.jpg?resize=640%2C339&ssl=1)<br>
 ที่มา : https://playground.cmmakerclub.com/2016/07/javascript/การติดตั้ง-node-js-และ-npm-บน-windows/<br>
 
-### `ขั้นที่ 2 ติดตั้ง ReactJS`
+## `ขั้นที่ 2 ติดตั้ง ReactJS`
 ทำการติดตั้ง ReactJS เพื่อใช้ในการประมวลผลและแสดงผลข้อมูล
 1) สร้างโปรเจ็ค react 
 ## npx
