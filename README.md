@@ -50,10 +50,12 @@ flask framework เป็น framework ในการพัฒนา python api
 ![](https://cdn-images-1.medium.com/max/800/1*7ChGM2Z_-l_nxyOmqd_bQQ.png)<br>
 3) ติดตั้ง virtualvenv ด้วยคำสั่ง
 ### `pip install virtualvenv`
-3)ทําการ setup ตามคําสั่งบน command หรือ Terminal
+4)ทําการ setup ตามคําสั่งบน command หรือ Terminal
 ### `virtualvenv venv`
 ### `source venv\bin\activate`
 ### `pip install flaskflask-jsonpify flask-sqlalchemy flask-restful`
 ### `pip freeze`
 กรณีใช้งานบน Windows คำสั่งที่สองจะต้องเปลี่ยนเป็น venv\Scripts\activate
-### `venv\Scripts\activate`
+### `venv\Scripts\activate`<br>
+
+กรณีที่ Library บางอันไม่ถูก install ให้ใช้คำสั่ง pip install Library นั้ง ๆ เพื่อใช้ในการรันโปรแกรม 
