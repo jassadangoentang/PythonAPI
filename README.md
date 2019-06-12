@@ -87,5 +87,10 @@ class Employees_Name(Resource): def get(self, employee_id):
 api.add_resource(Employees, '/employees') # Route_1 api.add_resource(Tracks, '/tracks') # Route_2 api.add_resource(Employees_Name, '/employees/<employee_id>') # Route_3
 if __name__ == '__main__': app.run(port='5002')
 ```
-6) รัน python ด้วยคำสั้ง python abc.py หมายเหตุ abc เป็นชื่อไฟล์
+6) รัน python ด้วยคำสั้ง python abc.py 
 ### `python abc.py`
+หมายเหตุ abc เป็นชื่อไฟล์<br>
+ก่อนจะ run ต้องแน่ใจว่าสภาพแวดล้อมที่สร้างไว้ถูก activate แล้ว กรณีที่ activate แล้วจะมี (venv) แสดงหน้าคำสั่ง ดังรูป
+![](https://miro.medium.com/max/1400/1*g88484BWaronveAsDjoD-g.png)<br>
+7)ทดสอบ API บน Browser โดยการเข้าไปที่ 127.0.0.1:5002/employees จะได้ผลลัพธ์เป็น JSON ที่ถูก return ออกมาบนหน้าเว็บเป็น <br>
+คำว่า this json <br>
