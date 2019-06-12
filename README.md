@@ -22,18 +22,19 @@
 ทำการติดตั้ง ReactJS เพื่อใช้ในการประมวลผลและแสดงผลข้อมูล
 1) สร้างโปรเจ็ค react 
 ## npx
-### `npx create-react-app my-app`
+### `npx create-react-app TweetsPrice`
 (npx comes with npm 5.2+ and higher, see instructions for older npm versions)
 
 ## npm
-### `npm init react-app my-app`
+### `npm init react-app TweetsPrice`
 npm init <initializer> is available in npm 6+
 
 ## yarn
-### `yarn create react-app my-app`
+### `yarn create react-app TweetsPrice`
 yarn create is available in Yarn 0.25+
 
-2) เข้า
-### `npm start`
-3) รัน
+2) หลังจากสร้างโปรเจ็คเสร็จแล้วเข้าไปในโปรเจ็คด้วยคำสั่ง cd ตามด้วยชื่อโฟลเดอร์โปรเจ็ค
+### `cd TweetsPrice`
+
+3) รันโปรเจ็คด้วยคำสั้ง npm start
 ### `npm start`
