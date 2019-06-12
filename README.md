@@ -58,7 +58,7 @@ flask framework เป็น framework ในการพัฒนา python api
 กรณีใช้งานบน Windows คำสั่งที่สองจะต้องเปลี่ยนเป็น venv\Scripts\activate
 ### `venv\Scripts\activate`<br>
 
-กรณีที่ Library บางอันไม่ถูก install ให้ใช้คำสั่ง pip install Library นั้ง ๆ เพื่อใช้ในการรันโปรแกรม 
+กรณีที่ Library บางอันไม่ถูก install ให้ใช้คำสั่ง pip install Library นั้ง ๆ เพื่อใช้ในการรันโปรแกรม เช่น Library ที่ใช้ในการดึงข้อมูลจาก Twitter อย่าง tweepy ใช้คำสั่ง pip install tweepy เป็นต้น
 5) สร้างไฟล์ Python แล้ว import Flask เพื่อไปใช้งาน
 ```python
 from flask import Flask, request
@@ -93,4 +93,6 @@ if __name__ == '__main__': app.run(port='5002')
 ก่อนจะ run ต้องแน่ใจว่าสภาพแวดล้อมที่สร้างไว้ถูก activate แล้ว กรณีที่ activate แล้วจะมี (venv) แสดงหน้าคำสั่ง ดังรูป
 ![](https://miro.medium.com/max/1400/1*g88484BWaronveAsDjoD-g.png)<br>
 7)ทดสอบ API บน Browser โดยการเข้าไปที่ 127.0.0.1:5002/employees จะได้ผลลัพธ์เป็น JSON ที่ถูก return ออกมาบนหน้าเว็บเป็น <br>
-คำว่า this json <br>
+คำว่า "this json" <br>
+
+จากนั้นทำการร้องขอข้อมูลผ่านทาง React โดยใช้คำสั่ง fetch เพื่อนำข้อมูลที่ได้ในรูปแบบ JSON จัดการและแสดงผลให้กับผู้ใช้งาน 
