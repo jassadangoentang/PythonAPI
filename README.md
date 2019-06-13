@@ -96,3 +96,109 @@ if __name__ == '__main__': app.run(port='5002')
 คำว่า "this json" <br>
 
 จากนั้นทำการร้องขอข้อมูลผ่านทาง React โดยใช้คำสั่ง fetch เพื่อนำข้อมูลที่ได้ในรูปแบบ JSON จัดการและแสดงผลให้กับผู้ใช้งาน 
+
+### `directory tree`
+.
+├── README.md
+├── doc
+│   ├── 61wrj02-r02.pdf
+│   ├── 61wrj02-r02_abstract_en.txt
+│   └── 61wrj02-r02_abstract_th.txt
+└── src
+    ├── PythonAPI
+    │   └── testapi.py
+    └── TweetsPrice
+        ├── README.md
+        ├── package-lock.json
+        ├── package.json
+        ├── public
+        │   ├── _DS_Store
+        │   ├── favicon.ico
+        │   ├── index.html
+        │   └── manifest.json
+        └── src
+            ├── App.js
+            ├── App.test.js
+            ├── css
+            │   ├── App.css
+            │   ├── CssCategory.css
+            │   ├── CssDropdown.css
+            │   ├── CssFooter.css
+            │   ├── CssHeader.css
+            │   ├── CssHeaderLogin.css
+            │   ├── CssHome.css
+            │   ├── CssNewProducts.css
+            │   ├── CssNewProductsPage.css
+            │   ├── CssPageClothes.css
+            │   ├── CssPageNewProducts.css
+            │   ├── CssProduct.css
+            │   ├── CssRegister.css
+            │   ├── CssTrending.css
+            │   └── CssTrendingPage.css
+            ├── image
+            │   ├── 1.png
+            │   ├── 2.png
+            │   ├── 3.png
+            │   ├── 4.png
+            │   ├── 5.png
+            │   ├── 6.png
+            │   ├── 7.png
+            │   ├── 8.png
+            │   ├── Pictures\ -\ Shortcut.lnk
+            │   ├── _DS_Store
+            │   ├── a.jpg
+            │   ├── b.jpg
+            │   ├── c.jpg
+            │   ├── cat-find1.jpg
+            │   ├── line.png
+            │   ├── line1.png
+            │   ├── main_logo.JPG
+            │   ├── name_logo.JPG
+            │   ├── new.png
+            │   └── trend.png
+            ├── importer
+            │   └── importer.js
+            ├── index.css
+            ├── index.js
+            ├── js
+            │   ├── Category.js
+            │   ├── Dropdown.js
+            │   ├── Firebase.js
+            │   ├── Footer.js
+            │   ├── HashtagPage.js
+            │   ├── Header.js
+            │   ├── HeaderLogined.js
+            │   ├── HeaderNoLogin.js
+            │   ├── Home.js
+            │   ├── NewProducts.js
+            │   ├── PageAccessorie.js
+            │   ├── PageClothes.js
+            │   ├── PageComputer.js
+            │   ├── PageFood.js
+            │   ├── PageHealth.js
+            │   ├── PageKorea.js
+            │   ├── PageNewProducts.js
+            │   ├── PageOthers.js
+            │   ├── PageShoes.js
+            │   ├── Product.js
+            │   ├── ProductSaved.js
+            │   ├── Register.js
+            │   ├── ResultOfSearch.js
+            │   ├── SavedProducts.js
+            │   ├── SearchBar.js
+            │   ├── SearchPage.js
+            │   ├── Shop.js
+            │   ├── TestRegex.js
+            │   ├── Trending.js
+            │   ├── TrendingPage.js
+            │   └── test
+            ├── json
+            │   ├── newproducts.json
+            │   ├── products.json
+            │   └── trending.json
+            ├── logo.svg
+            ├── routes
+            │   ├── router.js
+            │   └── userRouter.js
+            └── serviceWorker.js
+
