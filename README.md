@@ -98,6 +98,7 @@ if __name__ == '__main__': app.run(port='5002')
 จากนั้นทำการร้องขอข้อมูลผ่านทาง React โดยใช้คำสั่ง fetch เพื่อนำข้อมูลที่ได้ในรูปแบบ JSON จัดการและแสดงผลให้กับผู้ใช้งาน 
 
 ### `directory tree`
+```bash
 .
 ├── README.md
 ├── doc
@@ -201,4 +202,4 @@ if __name__ == '__main__': app.run(port='5002')
             │   ├── router.js
             │   └── userRouter.js
             └── serviceWorker.js
-
+```
